@@ -45,4 +45,4 @@ bye_world = gr.Interface(lambda name: "Bye " + name, "text", "text")
 demo = gr.TabbedInterface([hello_world, bye_world, demo_block], ["Wikidata item sampling", "RQV for item samples", "Progress tester"])
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(share=True)
