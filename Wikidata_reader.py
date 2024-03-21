@@ -49,6 +49,22 @@ for ii, entity_dict in enumerate(wjd):
     if ii > 10000:
         break
 
+def get_claim_ids_for_property(item: WikidataItem, property_id: str) -> list:
+    """Return a list of claim IDs for the given property_id."""
+    claim_ids = []
+    claim_group = item.get_claim_group(property_id)
+    for claim in claim_group:
+        claim_id = claim.id  # This gets the claim's ID
+        claim_ids.append(claim_id)
+    return claim_ids
+
+# Example usage for an item
+claim_ids = get_claim_ids_for_property(entity, P_OCCUPATION)
+print(claim_ids)
+
+
+"""
+
 # write the iterable of WikidataItem to disk as JSON
 out_fname = "filtered_entities.json"
 dump_entities_to_json(politicians, out_fname)
@@ -58,3 +74,4 @@ wjd_filtered = WikidataJsonDump(out_fname)
 for ii, entity_dict in enumerate(wjd_filtered):
     item = WikidataItem(entity_dict)
 
+"""

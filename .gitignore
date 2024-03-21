@@ -175,3 +175,6 @@ WD_Textual_References_Dataset/
 InProduction
 Prove/text_extraction/reference_html_as_sentences_df_new.csv
 google-chrome-stable_current_amd64.deb
+wikidata_claims_refs_parsed.db
+extracted_picks.txt
+to_extracted_picks.txt
